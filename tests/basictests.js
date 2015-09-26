@@ -38,6 +38,10 @@ var testCases = [
   {
     phrase: 'UPDATE: With a second #PickSix, Boise St. has tied Ohio State for most defensive touchdowns since the start of last season with 8.',
     mishearing: 'APATITE: With a scanty #PickSix, Bozo St. has dyed Oahu Stake for most defense touchdowns since the stuart of lust susanna with 8.'
+  },
+  {
+    phrase: 'Suddenly inspired to get brunch tomorrow morning, thanks to @emrata http://t.co/77NYffwK7w http://t.co/XO110Oq5nr',
+    mishearing: 'Suddenly inspired to get branch tamer mourning, s to @emrata http://t.co/77NYffwK7w http://t.co/XO110Oq5nr'
   }
 ];
 

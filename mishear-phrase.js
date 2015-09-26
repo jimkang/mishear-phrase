@@ -6,7 +6,7 @@ var async = require('async');
 var profileCapitalization = require('profile-capitalization');
 var capitalize = require('capitalize');
 
-var tokenRe = /\w+|\s+|[,./!:@#]+/g;
+var tokenRe = /\s+|(https?:\/\/[\w\/|\.]+)|\w+|[,./!:@#]+/g;
 var wordRe = /\w/;
 
 function MishearPhrase(createOpts) {
