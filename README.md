@@ -77,6 +77,8 @@ Tests
 
 Run tests with `make test`.
 
+Note: Because `homophonizer` is not deterministic, the tests sometimes pass and sometimes fail. (That needs to be changed.) But you can tell if it failed legitimately or not.
+
 License
 -------
 

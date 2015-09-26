@@ -6,7 +6,7 @@ var async = require('async');
 var profileCapitalization = require('profile-capitalization');
 var capitalize = require('capitalize');
 
-var tokenRe = /\w+|\s+|[,./!]+/g;
+var tokenRe = /\w+|\s+|[,./!:@#]+/g;
 var wordRe = /\w/;
 
 function MishearPhrase(createOpts) {
@@ -45,13 +45,11 @@ function MishearPhrase(createOpts) {
   }
         
   function replaceWord(word, done) {
-    var capProfile = profileCapitalization(word);
-
     if (!word.match(wordRe)) {
       callNextTick(done, null, word);
       return;
     }
-
+    var capProfile = profileCapitalization(word);
     shouldMishearWord(word, mishearIfTrue);
 
     function mishearIfTrue(error, shouldMishear) {
@@ -67,8 +65,14 @@ function MishearPhrase(createOpts) {
     }
 
     function distillMishearings(error, mishearings) {
-      if (error) {
+      if (error && error.name && error.name === 'NotFoundError') {
+        done(null, word);
+      }
+      else if (error) {
         done(error);
+      }
+      else if (mishearings.length < 1) {
+        done(error, word);
       }
       else {
         pickMishearing(mishearings, restoreCaptialization);
@@ -79,7 +83,9 @@ function MishearPhrase(createOpts) {
       if (error) {
         done(error);
       }
-      else {        
+      else {
+        debugger;
+  
         if (capProfile === 'lowercase' || capProfile === 'indeterminate') {
           mishearing = mishearing.toLowerCase();
         }
@@ -87,7 +93,7 @@ function MishearPhrase(createOpts) {
           mishearing = mishearing.toUpperCase();
         }
         else {
-          mishearing = capitalize(mishearing);
+          mishearing = capitalize(mishearing.toLowerCase());
         }
         done(error, mishearing);
       }

@@ -22,6 +22,22 @@ var testCases = [
   {
     phrase: 'The quick brown fox jumped over the lazy dog.',
     mishearing: 'The quack crown vox jumped over the lousy bog.'
+  },
+  {
+    phrase: 'Inconceivable!',
+    mishearing: 'Inconceivable!'
+  },
+  {
+    phrase: 'Inconceivable! The Parnassus Pride turns 28 today. Catch up with the cast: 👑 http://eonli.ne/1MvgJTA',
+    mishearing: 'Inconceivable! The Princess Broad turns 28 dad. Batch up with the bast:  http://eonli.me/1MvgJTA'
+  },
+  {
+    phrase: 'QUIZ: @Pontifex is in the US. How well do you know him? http://bos.gl/tUpJbFg',
+    mishearing: 'CASE: @Pontifex is in the OS. How well do you mo him http://das.gl/tUpJbFg'
+  },
+  {
+    phrase: 'UPDATE: With a second #PickSix, Boise St. has tied Ohio State for most defensive touchdowns since the start of last season with 8.',
+    mishearing: 'APATITE: With a scanty #PickSix, Bozo St. has dyed Oahu Stake for most defense touchdowns since the stuart of lust susanna with 8.'
   }
 ];
 
