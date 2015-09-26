@@ -46,7 +46,7 @@ Usage
 
 Output:
 
-    The something something
+    The quack crown vox jumped over the lousy bog.
 
 **shouldMishearWord** is a function that tells mishearPhrase whether it should mishear a particular word. It can be used to limit how many mishearings there are in a phrase, e.g.:
 
