@@ -1,6 +1,6 @@
 {
   "name": "mishear-phrase",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This module is like `mishear`, but it works on a phrase instead of just a word.",
   "main": "mishear-phrase.js",
   "scripts": {
