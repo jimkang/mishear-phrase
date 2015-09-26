@@ -72,8 +72,6 @@ The default is a function that always passes back `true`.
 
 **pickMishearing** is a function that picks from an array of the possible mishearings for a word. You can use this to pick words at random or via whatever heuristic you like. The default is a function that always picks the first element of the array.
 
-Output:
-
 Tests
 -----
 

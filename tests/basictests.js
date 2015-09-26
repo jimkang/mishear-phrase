@@ -21,7 +21,7 @@ function pickMishearing(mishearings, done) {
 var testCases = [
   {
     phrase: 'The quick brown fox jumped over the lazy dog.',
-    mishearing: ''
+    mishearing: 'The quack crown vox jumped over the lousy bog.'
   }
 ];
 

@@ -3,6 +3,11 @@ var callNextTick = require('call-next-tick');
 var _ = require('lodash');
 var queue = require('queue-async');
 var async = require('async');
+var profileCapitalization = require('profile-capitalization');
+var capitalize = require('capitalize');
+
+var tokenRe = /\w+|\s+|[,./!]+/g;
+var wordRe = /\w/;
 
 function MishearPhrase(createOpts) {
   var shouldMishearWord;
@@ -21,7 +26,12 @@ function MishearPhrase(createOpts) {
   }
 
   function mishearPhrase(phrase, done) {
-    var words = _.compact(phrase.split(/[\s]/g));
+    var words = [];
+    var result;
+    while ((result = tokenRe.exec(phrase)) !== null) {
+      words.push(result[0]);
+    }
+
     async.map(words, replaceWord, joinWords);
 
     function joinWords(error, words) {
@@ -29,14 +39,19 @@ function MishearPhrase(createOpts) {
         done(error);
       }
       else {
-        done(null, words.join(' '));
+        done(null, words.join(''));
       }
     }
   }
         
   function replaceWord(word, done) {
-    // TODO: Preserve capitalization.
-    word = word.replace(/\W/g, '');
+    var capProfile = profileCapitalization(word);
+
+    if (!word.match(wordRe)) {
+      callNextTick(done, null, word);
+      return;
+    }
+
     shouldMishearWord(word, mishearIfTrue);
 
     function mishearIfTrue(error, shouldMishear) {
@@ -56,7 +71,25 @@ function MishearPhrase(createOpts) {
         done(error);
       }
       else {
-        pickMishearing(mishearings, done);
+        pickMishearing(mishearings, restoreCaptialization);
+      }
+    }
+
+    function restoreCaptialization(error, mishearing) {
+      if (error) {
+        done(error);
+      }
+      else {        
+        if (capProfile === 'lowercase' || capProfile === 'indeterminate') {
+          mishearing = mishearing.toLowerCase();
+        }
+        else if (capProfile === 'allcaps') {
+          mishearing = mishearing.toUpperCase();
+        }
+        else {
+          mishearing = capitalize(mishearing);
+        }
+        done(error, mishearing);
       }
     }
   }
@@ -71,7 +104,5 @@ function defaultShouldMishearWord(word, done) {
 function defaultPickMishearing(mishearings, done) {
   callNextTick(done, null, mishearings[0]);
 }
-
-
 
 module.exports = MishearPhrase;
