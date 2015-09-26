@@ -39,7 +39,13 @@ function MishearPhrase(createOpts) {
         done(error);
       }
       else {
-        done(null, words.join(''));
+        var misheardPhrase = words.join('');
+        if (misheardPhrase.toLowerCase() === phrase.toLowerCase()) {
+          done();
+        }
+        else {
+          done(null, misheardPhrase);
+        }
       }
     }
   }
@@ -84,8 +90,6 @@ function MishearPhrase(createOpts) {
         done(error);
       }
       else {
-        debugger;
-  
         if (capProfile === 'lowercase' || capProfile === 'indeterminate') {
           mishearing = mishearing.toLowerCase();
         }

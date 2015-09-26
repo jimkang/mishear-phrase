@@ -25,7 +25,7 @@ var testCases = [
   },
   {
     phrase: 'Inconceivable!',
-    mishearing: 'Inconceivable!'
+    mishearing: undefined
   },
   {
     phrase: 'Inconceivable! The Parnassus Pride turns 28 today. Catch up with the cast: 👑 http://eonli.ne/1MvgJTA',
