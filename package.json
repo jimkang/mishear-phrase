@@ -1,0 +1,30 @@
+{
+  "name": "mishear-phrase",
+  "version": "1.0.0",
+  "description": "This module is like `mishear`, but it works on a phrase instead of just a word.",
+  "main": "mishear-phrase.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jimkang/mishear-phrase.git"
+  },
+  "keywords": [],
+  "author": "Jim Kang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jimkang/mishear-phrase/issues"
+  },
+  "homepage": "https://github.com/jimkang/mishear-phrase",
+  "devDependencies": {
+    "tape": "^3.0.3",
+    "wordpos": "^0.1.15"
+  },
+  "dependencies": {
+    "call-next-tick": "^1.1.2",
+    "lodash": "^3.10.1",
+    "mishear": "^1.0.0",
+    "queue-async": "^1.0.7"
+  }
+}
