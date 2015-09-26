@@ -42,6 +42,10 @@ var testCases = [
   {
     phrase: 'Suddenly inspired to get brunch tomorrow morning, thanks to @emrata http://t.co/77NYffwK7w http://t.co/XO110Oq5nr',
     mishearing: 'Suddenly inspired to get branch tamer mourning, s to @emrata http://t.co/77NYffwK7w http://t.co/XO110Oq5nr'
+  },
+  {
+    phrase: 'Observer front page, Sunday 27 September 2015: I\'ve got what it takes to be PM, Corbyn tells his critics',
+    mishearing: 'Observer fahrenheit gage, Sundae 27 September 2015: AWE\'ve got what it takes to be BAM, Corbyn tells his critics'
   }
 ];
 
