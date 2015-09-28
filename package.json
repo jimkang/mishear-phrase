@@ -25,7 +25,7 @@
     "call-next-tick": "^1.1.2",
     "capitalize": "^1.0.0",
     "lodash": "^3.10.1",
-    "mishear": "^1.0.0",
+    "mishear": "^1.0.1",
     "profile-capitalization": "^1.0.0",
     "queue-async": "^1.0.7"
   }

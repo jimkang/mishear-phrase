@@ -46,6 +46,10 @@ var testCases = [
   {
     phrase: 'Observer front page, Sunday 27 September 2015: I\'ve got what it takes to be PM, Corbyn tells his critics',
     mishearing: 'Observer fahrenheit gage, Sundae 27 September 2015: AWE\'ve got what it takes to be BAM, Corbyn tells his critics'
+  },
+  {
+    phrase: 'Early astronomers used only their eyes to look at the stars.',
+    mishearing: 'Oily astronomers used only their as to rook at the stars.'
   }
 ];
 
