@@ -50,6 +50,10 @@ var testCases = [
   {
     phrase: 'Early astronomers used only their eyes to look at the stars.',
     mishearing: 'Oily astronomers used only their a to lac at the stars.'
+  },
+  {
+    phrase: 'It has been said that democracy is the worst form of government, except all the other that have been tried.\n  --Winston Churchill',
+    mishearing: 'At has been said that democracy is the waist farm of government, accept all the other that have been dried.\n  --Winston Churchill'
   }
 ];
 
