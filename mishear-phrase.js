@@ -44,7 +44,7 @@ function MishearPhrase(createOpts) {
       else {
         var misheardPhrase = words.join('');
         if (misheardPhrase.toLowerCase() === phrase.toLowerCase()) {
-          done();
+          done(new Error('Could not come up with a mishearing.'));
         }
         else {
           done(null, misheardPhrase);

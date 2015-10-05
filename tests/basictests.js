@@ -24,10 +24,6 @@ var testCases = [
     mishearing: 'The quack brain fawkes jumped over the lacy bog.'
   },
   {
-    phrase: 'Inconceivable!',
-    mishearing: undefined
-  },
-  {
     phrase: 'Inconceivable! The Parnassus Pride turns 28 today. Catch up with the cast: 👑 http://eonli.ne/1MvgJTA',
     mishearing: 'Inconceivable! The Parnassus Bride turns 28 today. Batch up with the bast:  http://eonli.ne/1MvgJTA'
   },
