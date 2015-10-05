@@ -21,7 +21,7 @@ function pickMishearing(mishearings, done) {
 var testCases = [
   {
     phrase: 'The quick brown fox jumped over the lazy dog.',
-    mishearing: 'The quack crown vox jumped over the lousy bog.'
+    mishearing: 'The quack brain fawkes jumped over the lacy bog.'
   },
   {
     phrase: 'Inconceivable!',
@@ -29,41 +29,40 @@ var testCases = [
   },
   {
     phrase: 'Inconceivable! The Parnassus Pride turns 28 today. Catch up with the cast: 👑 http://eonli.ne/1MvgJTA',
-    mishearing: 'Inconceivable! The Princess Broad turns 28 dad. Batch up with the bast:  http://eonli.me/1MvgJTA'
+    mishearing: 'Inconceivable! The Parnassus Bride turns 28 today. Batch up with the bast:  http://eonli.ne/1MvgJTA'
   },
   {
     phrase: 'QUIZ: @Pontifex is in the US. How well do you know him? http://bos.gl/tUpJbFg',
-    mishearing: 'CASE: @Pontifex is in the OS. How well do you mo him http://das.gl/tUpJbFg'
+    mishearing: 'QUIZ: @Pontifex is in the ACE. How well do you gnaw him http://bos.gl/tUpJbFg'
   },
   {
     phrase: 'UPDATE: With a second #PickSix, Boise St. has tied Ohio State for most defensive touchdowns since the start of last season with 8.',
-    mishearing: 'APATITE: With a scanty #PickSix, Bozo St. has dyed Oahu Stake for most defense touchdowns since the stuart of lust susanna with 8.'
+    mishearing: 'UPDATE: With a second #PickSix, Boise St. has dyed Ohio Skate for most defense touchdowns since the stuart of laced season with 8.'
   },
   {
     phrase: 'Suddenly inspired to get brunch tomorrow morning, thanks to @emrata http://t.co/77NYffwK7w http://t.co/XO110Oq5nr',
-    mishearing: 'Suddenly inspired to get branch tamer mourning, s to @emrata http://t.co/77NYffwK7w http://t.co/XO110Oq5nr'
+    mishearing: 'Suddenly inspired to get branch tomorrow morning, s to @emrata http://t.co/77NYffwK7w http://t.co/XO110Oq5nr'
   },
   {
     phrase: 'Observer front page, Sunday 27 September 2015: I\'ve got what it takes to be PM, Corbyn tells his critics',
-    mishearing: 'Observer fahrenheit gage, Sundae 27 September 2015: AWE\'ve got what it takes to be BAM, Corbyn tells his critics'
+    mishearing: 'Observer front cage, Sunday 27 September 2015: A\'ve got what it takes to be PM, Corbyn tells his critics'
   },
   {
     phrase: 'Early astronomers used only their eyes to look at the stars.',
-    mishearing: 'Oily astronomers used only their as to rook at the stars.'
+    mishearing: 'Oily astronomers used only their a to lac at the stars.'
   }
 ];
+
+var mishearPhrase = MishearPhrase({
+  shouldMishearWord: shouldMishearWord,
+  pickMishearing: pickMishearing
+});
 
 testCases.forEach(runTest);
 
 function runTest(testCase) {
   test('Mishearing "' + testCase.phrase + '"', function mishearingTest(t) {
     t.plan(2);
-
-    var mishearPhrase = MishearPhrase({
-      shouldMishearWord: shouldMishearWord,
-      pickMishearing: pickMishearing
-    });
-
     mishearPhrase(testCase.phrase, checkResult);
 
     function checkResult(error, mishearing) {

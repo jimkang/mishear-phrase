@@ -22,10 +22,11 @@
     "wordpos": "^0.1.15"
   },
   "dependencies": {
+    "async": "^1.4.2",
     "call-next-tick": "^1.1.2",
     "capitalize": "^1.0.0",
     "lodash": "^3.10.1",
-    "mishear": "^1.0.1",
+    "mishear": "^2.1.0",
     "profile-capitalization": "^1.0.0",
     "queue-async": "^1.0.7"
   }

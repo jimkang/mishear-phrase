@@ -1,4 +1,4 @@
-var mishear = require('mishear');
+var createMishear = require('mishear');
 var callNextTick = require('call-next-tick');
 var _ = require('lodash');
 var queue = require('queue-async');
@@ -25,6 +25,8 @@ function MishearPhrase(createOpts) {
   if (!pickMishearing) {
     pickMishearing = defaultPickMishearing;
   }
+
+  var mishear = createMishear();
 
   function mishearPhrase(phrase, done) {
     var words = [];
