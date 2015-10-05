@@ -6,7 +6,7 @@ var async = require('async');
 var profileCapitalization = require('profile-capitalization');
 var capitalize = require('capitalize');
 
-var tokenRe = /\s+|(https?:\/\/[\w\/|\.\(\)]+)|\w+|[,./!:@#'"-]+/g;
+var tokenRe = /\s+|(https?:\/\/[\w\/|\.\(\)]+)|\w+|[,./!:@#'"-?]+/g;
 // ' <= For the benefit of Sublime syntax coloring.
 var wordRe = /\w/;
 

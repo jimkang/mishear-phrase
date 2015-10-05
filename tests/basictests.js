@@ -33,7 +33,7 @@ var testCases = [
   },
   {
     phrase: 'QUIZ: @Pontifex is in the US. How well do you know him? http://bos.gl/tUpJbFg',
-    mishearing: 'QUIZ: @Pontifex is in the ACE. How well do you gnaw him http://bos.gl/tUpJbFg'
+    mishearing: 'QUIZ: @Pontifex is in the ACE. How well do you gnaw him? http://bos.gl/tUpJbFg'
   },
   {
     phrase: 'UPDATE: With a second #PickSix, Boise St. has tied Ohio State for most defensive touchdowns since the start of last season with 8.',
@@ -54,6 +54,10 @@ var testCases = [
   {
     phrase: 'It has been said that democracy is the worst form of government, except all the other that have been tried.\n  --Winston Churchill',
     mishearing: 'At has been said that democracy is the waist farm of government, accept all the other that have been dried.\n  --Winston Churchill'
+  },
+  {
+    phrase: 'What are you doing here? You haven\'t worked a day in your life!',
+    mishearing: 'What are you doing here? You haitian\'t worked a bay in your laugh!'
   }
 ];
 
