@@ -35,7 +35,7 @@ function MishearPhrase(createOpts) {
       words.push(result[0]);
     }
 
-    async.map(words, replaceWord, joinWords);
+    async.mapSeries(words, replaceWord, joinWords);
 
     function joinWords(error, words) {
       if (error) {
