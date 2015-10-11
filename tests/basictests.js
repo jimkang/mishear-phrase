@@ -33,11 +33,11 @@ var testCases = [
   },
   {
     phrase: 'UPDATE: With a second #PickSix, Boise St. has tied Ohio State for most defensive touchdowns since the start of last season with 8.',
-    mishearing: 'UPDATE: With a second #PickSix, Boise St. has dyed Ohio Skate for most defense touchdowns since the stuart of laced season with 8.'
+    mishearing: 'UPDATE: With a second #PickSix, Boise St. has dyed Ohio Skate for most defensive touchdowns since the stuart of laced season with 8.'
   },
   {
     phrase: 'Suddenly inspired to get brunch tomorrow morning, thanks to @emrata http://t.co/77NYffwK7w http://t.co/XO110Oq5nr',
-    mishearing: 'Suddenly inspired to get branch tomorrow morning, s to @emrata http://t.co/77NYffwK7w http://t.co/XO110Oq5nr'
+    mishearing: 'Suddenly inspired to get branch tomorrow morning, thanks to @emrata http://t.co/77NYffwK7w http://t.co/XO110Oq5nr'
   },
   {
     phrase: 'Observer front page, Sunday 27 September 2015: I\'ve got what it takes to be PM, Corbyn tells his critics',
